@@ -27,7 +27,6 @@ class UrlMappings {
 
 
 
-
         "/"(view:"/blog/index")
         "/admin"(view:"/admin/index")
         "500"(view:'/error')
