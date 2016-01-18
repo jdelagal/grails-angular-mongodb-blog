@@ -1,11 +1,11 @@
 package com.grails.blog.admin
 
-import com.grails.blog.auth.User
-import com.grails.blog.command.UserPassword
+import com.grails.blog.auth.Usuario
+import com.grails.blog.command.UsuarioPassword
 
 import static org.springframework.http.HttpStatus.*
 
-class UserController {
+class UsuarioController {
 
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
@@ -15,13 +15,13 @@ class UserController {
     def profile() {
         def currentUser = springSecurityService.getCurrentUser()
         if (currentUser) {
-            respond User.get(currentUser.id), [excludes: ['class','password']]
+            respond Usuario.get(currentUser.id), [excludes: ['class','password']]
         } else {
             render status: NOT_FOUND
         }
     }
 
-    def updateProfile(User userInstance) {
+    def updateProfile(Usuario userInstance) {
         def currentUser = springSecurityService.getCurrentUser()
         if (!currentUser) {
             render status: NOT_FOUND
@@ -43,9 +43,9 @@ class UserController {
         respond userInstance, [status: OK, excludes: ['class','password']]
     }
 
-    def password(UserPassword password) {
+    def password(UsuarioPassword password) {
         def currentUserId = springSecurityService.getCurrentUser().id
-        User currentUser = User.get(currentUserId)
+        Usuario currentUser = Usuario.get(currentUserId)
         if (!currentUser) {
             render status: NOT_FOUND
             return

@@ -1,6 +1,6 @@
 package com.grails.blog.auth
 
-class User {
+class Usuario {
 
 	transient springSecurityService
 

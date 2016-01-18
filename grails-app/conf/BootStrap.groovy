@@ -1,6 +1,6 @@
 import com.grails.blog.BlogSetting
 import com.grails.blog.auth.Role
-import com.grails.blog.auth.User
+import com.grails.blog.auth.Usuario
 
 class BootStrap {
 
@@ -10,8 +10,8 @@ class BootStrap {
             new Role(authority: "ROLE_ADMIN").save(failOnError: true)
 
 
-         User.findByUsername("admin") ?:
-            new User(username: 'admin',
+         Usuario.findByUsername("admin") ?:
+            new Usuario(username: 'admin',
                 password: 'admin123',
                 email: 'hussain.engr@gmail.com',
                 name: 'Hussain Fakhruddin',

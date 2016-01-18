@@ -6,7 +6,7 @@ class UserRole implements Serializable {
 
 	private static final long serialVersionUID = 1
 
-	User user
+	Usuario user
 	Role role
 
 	boolean equals(other) {
@@ -32,23 +32,23 @@ class UserRole implements Serializable {
 		}.get()
 	}
 
-	static UserRole create(User user, Role role, boolean flush = false) {
+	static UserRole create(Usuario user, Role role, boolean flush = false) {
 		new UserRole(user: user, role: role).save(flush: flush, insert: true)
 	}
 
-	static boolean remove(User u, Role r, boolean flush = false) {
+	static boolean remove(Usuario u, Role r, boolean flush = false) {
 
 		int rowCount = UserRole.where {
-			user == User.load(u.id) &&
+			user == Usuario.load(u.id) &&
 			role == Role.load(r.id)
 		}.deleteAll()
 
 		rowCount > 0
 	}
 
-	static void removeAll(User u) {
+	static void removeAll(Usuario u) {
 		UserRole.where {
-			user == User.load(u.id)
+			user == Usuario.load(u.id)
 		}.deleteAll()
 	}
 

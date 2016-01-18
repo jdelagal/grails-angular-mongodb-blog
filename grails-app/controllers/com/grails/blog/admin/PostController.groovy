@@ -1,6 +1,6 @@
 package com.grails.blog.admin
 
-import com.grails.blog.Comment
+import com.grails.blog.Comentario
 import com.grails.blog.Post
 import grails.transaction.Transactional
 

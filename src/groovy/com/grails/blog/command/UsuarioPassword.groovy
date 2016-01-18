@@ -10,7 +10,7 @@ import grails.validation.Validateable
  * To change this template use File | Settings | File Templates.
  */
 @Validateable
-class UserPassword {
+class UsuarioPassword {
 
     String currentPassword
     String newPassword

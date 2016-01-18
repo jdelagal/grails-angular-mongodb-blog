@@ -1,0 +1,259 @@
+
+Active Connections
+
+  Proto  Local Address          Foreign Address        State           PID
+  TCP    0.0.0.0:80             0.0.0.0:0              LISTENING       5008
+ [Skype.exe]
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING       668
+  RpcSs
+ [svchost.exe]
+  TCP    0.0.0.0:443            0.0.0.0:0              LISTENING       5008
+ [Skype.exe]
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING       4
+ Can not obtain ownership information
+  TCP    0.0.0.0:1521           0.0.0.0:0              LISTENING       1936
+ [tnslsnr.exe]
+  TCP    0.0.0.0:3306           0.0.0.0:0              LISTENING       1928
+ [mysqld.exe]
+  TCP    0.0.0.0:8080           0.0.0.0:0              LISTENING       1936
+ [tnslsnr.exe]
+  TCP    0.0.0.0:12951          0.0.0.0:0              LISTENING       5008
+ [Skype.exe]
+  TCP    0.0.0.0:27017          0.0.0.0:0              LISTENING       1880
+ [mongod.exe]
+  TCP    0.0.0.0:49152          0.0.0.0:0              LISTENING       732
+ [wininit.exe]
+  TCP    0.0.0.0:49153          0.0.0.0:0              LISTENING       812
+  eventlog
+ [svchost.exe]
+  TCP    0.0.0.0:49154          0.0.0.0:0              LISTENING       1092
+  Schedule
+ [svchost.exe]
+  TCP    0.0.0.0:49155          0.0.0.0:0              LISTENING       808
+ [lsass.exe]
+  TCP    0.0.0.0:49160          0.0.0.0:0              LISTENING       2008
+ [ORACLE.EXE]
+  TCP    0.0.0.0:49161          0.0.0.0:0              LISTENING       792
+ [services.exe]
+  TCP    0.0.0.0:49162          0.0.0.0:0              LISTENING       1328
+ [ccSvcHst.exe]
+  TCP    127.0.0.1:1521         127.0.0.1:49603        ESTABLISHED     1936
+ [tnslsnr.exe]
+  TCP    127.0.0.1:49156        0.0.0.0:0              LISTENING       1936
+ [tnslsnr.exe]
+  TCP    127.0.0.1:49342        0.0.0.0:0              LISTENING       2352
+ [System]
+  TCP    127.0.0.1:49471        0.0.0.0:0              LISTENING       4728
+ [sqldeveloper64W.exe]
+  TCP    127.0.0.1:49603        127.0.0.1:1521         ESTABLISHED     4728
+ [sqldeveloper64W.exe]
+  TCP    127.0.0.1:62522        0.0.0.0:0              LISTENING       1336
+ [vpnagent.exe]
+  TCP    192.168.1.37:139       0.0.0.0:0              LISTENING       4
+ Can not obtain ownership information
+  TCP    192.168.1.37:49170     64.233.184.188:5228    ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49194     64.233.184.189:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49199     216.58.210.163:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49211     91.190.216.58:12350    ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49217     157.56.126.107:443     ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49228     157.56.17.247:443      ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49294     157.55.130.145:40031   ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49354     209.20.75.76:80        CLOSE_WAIT      6520
+ [sublime_text.exe]
+  TCP    192.168.1.37:49362     192.30.252.92:443      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49449     104.208.236.186:443    ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49463     216.58.211.238:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49472     84.53.131.131:443      CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49473     84.53.131.131:443      CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49474     84.53.131.131:443      CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49475     31.13.83.4:443         CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49477     104.83.7.159:443       ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49480     31.13.83.36:443        CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49481     31.13.83.36:443        CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49482     31.13.83.4:443         CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49483     31.13.83.4:443         CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49492     93.184.221.200:443     CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49494     2.19.163.163:443       ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49497     104.83.195.78:443      CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49498     104.83.187.123:443     CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49499     104.83.191.71:443      ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49504     88.221.106.84:443      ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49507     93.184.221.200:443     CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49514     185.43.181.217:443     ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49515     185.43.181.217:443     ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49516     185.43.181.217:443     ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49517     185.43.181.217:443     ESTABLISHED     5008
+ [Skype.exe]
+  TCP    192.168.1.37:49523     93.184.221.200:443     CLOSE_WAIT      5008
+ [Skype.exe]
+  TCP    192.168.1.37:49538     216.58.210.163:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49539     216.58.210.132:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49542     64.233.167.132:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49545     216.58.210.174:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49546     216.58.210.174:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49548     216.58.210.163:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49552     216.58.211.226:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49560     66.102.1.95:80         ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49561     216.58.211.227:80      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49563     216.58.210.174:80      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49566     216.58.210.174:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49584     216.58.211.238:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49592     104.244.42.136:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49601     216.58.210.142:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49606     192.30.252.127:443     CLOSE_WAIT      5656
+ [GitHub.exe]
+  TCP    192.168.1.37:49607     192.30.252.127:443     CLOSE_WAIT      5656
+ [GitHub.exe]
+  TCP    192.168.1.37:49608     192.30.252.126:443     CLOSE_WAIT      5656
+ [GitHub.exe]
+  TCP    192.168.1.37:49609     192.30.252.126:443     CLOSE_WAIT      5656
+ [GitHub.exe]
+  TCP    192.168.1.37:49613     216.58.210.131:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49614     74.125.71.132:443      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49619     64.233.184.132:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49620     216.58.210.162:80      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49621     216.58.210.162:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49622     216.58.211.226:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49623     216.58.210.162:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49625     216.58.210.130:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49627     216.58.211.230:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49628     216.58.210.162:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49632     216.58.210.230:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49633     216.58.211.225:443     ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49634     5.145.168.130:443      TIME_WAIT       0
+  TCP    192.168.1.37:49638     5.145.168.130:443      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49643     54.175.54.188:443      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49646     2.19.173.174:443       ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49647     2.19.173.174:443       ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49648     54.225.81.106:443      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    192.168.1.37:49649     54.225.81.106:443      ESTABLISHED     4916
+ [chrome.exe]
+  TCP    [::]:135               [::]:0                 LISTENING       668
+  RpcSs
+ [svchost.exe]
+  TCP    [::]:445               [::]:0                 LISTENING       4
+ Can not obtain ownership information
+  TCP    [::]:1521              [::]:0                 LISTENING       1936
+ [tnslsnr.exe]
+  TCP    [::]:8080              [::]:0                 LISTENING       1936
+ [tnslsnr.exe]
+  TCP    [::]:49152             [::]:0                 LISTENING       732
+ [wininit.exe]
+  TCP    [::]:49153             [::]:0                 LISTENING       812
+  eventlog
+ [svchost.exe]
+  TCP    [::]:49154             [::]:0                 LISTENING       1092
+  Schedule
+ [svchost.exe]
+  TCP    [::]:49155             [::]:0                 LISTENING       808
+ [lsass.exe]
+  TCP    [::]:49160             [::]:0                 LISTENING       2008
+ [ORACLE.EXE]
+  TCP    [::]:49161             [::]:0                 LISTENING       792
+ [services.exe]
+  TCP    [::]:49163             [::]:0                 LISTENING       1328
+ [ccSvcHst.exe]
+  TCP    [fe80::d584:91f4:b5ff:e78c%13]:1521  [fe80::d584:91f4:b5ff:e78c%13]:49159  ESTABLISHED     1936
+ [tnslsnr.exe]
+  TCP    [fe80::d584:91f4:b5ff:e78c%13]:49159  [fe80::d584:91f4:b5ff:e78c%13]:1521  ESTABLISHED     2008
+ [ORACLE.EXE]
+  UDP    0.0.0.0:123            *:*                                    1068
+  W32Time
+ [svchost.exe]
+  UDP    0.0.0.0:443            *:*                                    5008
+ [Skype.exe]
+  UDP    0.0.0.0:500            *:*                                    1092
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:4500           *:*                                    1092
+  IKEEXT
+ [svchost.exe]
+  UDP    0.0.0.0:5355           *:*                                    1412
+  Dnscache
+ [svchost.exe]
+  UDP    0.0.0.0:12951          *:*                                    5008
+ [Skype.exe]
+  UDP    0.0.0.0:64687          *:*                                    5008
+ [Skype.exe]
+  UDP    127.0.0.1:60327        *:*                                    5008
+ [Skype.exe]
+  UDP    127.0.0.1:60328        *:*                                    5008
+ [Skype.exe]
+  UDP    192.168.1.37:137       *:*                                    4
+ Can not obtain ownership information
+  UDP    192.168.1.37:138       *:*                                    4
+ Can not obtain ownership information
+  UDP    [::]:123               *:*                                    1068
+  W32Time
+ [svchost.exe]
+  UDP    [::]:500               *:*                                    1092
+  IKEEXT
+ [svchost.exe]
+  UDP    [::]:4500              *:*                                    1092
+  IKEEXT
+ [svchost.exe]
+  UDP    [::]:5355              *:*                                    1412
+  Dnscache
+ [svchost.exe]
+  UDP    [::]:64687             *:*                                    5008
+ [Skype.exe]

@@ -58,7 +58,7 @@ grails.project.dependency.resolution = {
         build ":tomcat:7.0.52.1"
 
         // plugins for the compile step
-        compile ":mongodb:3.0.0"
+        //compile ":mongodb:3.0.0"
         compile ":asset-pipeline:1.8.7"
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.2'
@@ -74,6 +74,7 @@ grails.project.dependency.resolution = {
                 exclude 'database-session'
             }
         }
-
+        runtime ":hibernate:3.6.10.9" // or ":hibernate4:4.3.4"
+        runtime ":database-migration:1.3.8"
     }
 }
