@@ -23,36 +23,6 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/auth/login.html',
                 controller: 'LoginController'
             }).
-            /*
-            when('/posts', {
-                templateUrl: 'views/post/list.html',
-                controller: 'PostListController'
-            }).
-            when('/posts/create', {
-                templateUrl: 'views/post/create.html',
-                controller: 'PostDetailController'
-            }).
-            when('/posts/:postId/edit', {
-                templateUrl: 'views/post/edit.html',
-                controller: 'PostDetailController'
-            }).
-            when('/posts/:postId', {
-                templateUrl: 'views/post/post.html',
-                controller: 'PostDetailController'
-            }).
-            when('/pages', {
-                templateUrl: 'views/page/list.html',
-                controller: 'PageListController'
-            }).
-            when('/pages/create', {
-                templateUrl: 'views/page/create.html',
-                controller: 'PageDetailController'
-            }).
-            when('/pages/:pageId/edit', {
-                templateUrl: 'views/page/edit.html',
-                controller: 'PageDetailController'
-            }).
-            */
             when('/users/profile', {
                 templateUrl: 'views/user/edit.html',
                 controller: 'UserDetailController'
@@ -61,12 +31,6 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/user/password.html',
                 controller: 'UserPasswordController'
             }).
-            /*
-            when('/settings', {
-                templateUrl: 'views/settings/edit.html',
-                controller: 'SettingsController'
-            }).
-            */
             otherwise({
                 redirectTo: '/'
             });
