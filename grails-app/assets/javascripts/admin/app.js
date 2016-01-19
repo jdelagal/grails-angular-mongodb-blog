@@ -61,10 +61,12 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/user/password.html',
                 controller: 'UserPasswordController'
             }).
+            /*
             when('/settings', {
                 templateUrl: 'views/settings/edit.html',
                 controller: 'SettingsController'
             }).
+            */
             otherwise({
                 redirectTo: '/'
             });

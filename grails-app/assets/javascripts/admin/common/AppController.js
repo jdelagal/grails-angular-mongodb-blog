@@ -4,10 +4,8 @@
 
 var appController = angular.module('gambApp');
 
-appController.controller('AppController', ['$rootScope', '$scope', '$http', 'SettingsApi', 'UserApi',
-    function ($rootScope, $scope, $http, SettingsApi, UserApi) {
-
-        $scope.settings = SettingsApi.Setting.setting();
+appController.controller('AppController', ['$rootScope', '$scope', '$http', 'UserApi',
+    function ($rootScope, $scope, $http, UserApi) {
 
         $scope.currentUser = UserApi.User.profile();
 
