@@ -1,7 +1,5 @@
 package com.grails.blog.admin
 
-import com.grails.blog.Page
-import com.grails.blog.Post
 import com.grails.blog.command.Dashboard
 
 class DashboardController {
@@ -11,10 +9,10 @@ class DashboardController {
 
     def index() {
         Dashboard dashboard = new Dashboard()
-        dashboard.activePages = Page.countByActive(true)
-        dashboard.inActivePages = Page.countByActive(false)
-        dashboard.activePosts = Post.countByActive(true)
-        dashboard.inActivePosts = Post.countByActive(false)
+        dashboard.activePages = 1
+        dashboard.inActivePages = 0
+        dashboard.activePosts = 0
+        dashboard.inActivePosts = 0
 
         respond dashboard
     }
