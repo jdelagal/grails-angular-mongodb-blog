@@ -70,9 +70,17 @@ class UsuarioController {
                 return
             }
         } else {
+            /*
             password.errors.reject(
                     'userPassword.oldPassword.doesnotmatch',
                     '[Property [{0}] of class [{1}] is incorrect]')
+            currentUser.save()
+            render status: OK                    
+            */
+            println "currentUser.password: "+currentUser.password
+            println "password.currentPassword: "+password.currentPassword
+            println "springSecurityService.encodePassword(password.currentPassword): "+springSecurityService.encodePassword(password.currentPassword)    
+            println "password.validate(): " + password.validate()
         }
 
         password.validate()

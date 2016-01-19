@@ -151,4 +151,4 @@ grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'use
 grails.assets.excludes = ["ckeditor/*.js"]
 
 //Enable disable updates for HEROKU
-blog.updates.enabled = false
+blog.updates.enabled = true
