@@ -23,6 +23,7 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/auth/login.html',
                 controller: 'LoginController'
             }).
+            /*
             when('/posts', {
                 templateUrl: 'views/post/list.html',
                 controller: 'PostListController'
@@ -51,6 +52,7 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/page/edit.html',
                 controller: 'PageDetailController'
             }).
+            */
             when('/users/profile', {
                 templateUrl: 'views/user/edit.html',
                 controller: 'UserDetailController'
