@@ -23,6 +23,10 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/auth/login.html',
                 controller: 'LoginController'
             }).
+            when('/pages', {
+                templateUrl: 'views/page/list.html',
+                controller: 'PageListController'
+            }).            
             when('/users/profile', {
                 templateUrl: 'views/user/edit.html',
                 controller: 'UserDetailController'
