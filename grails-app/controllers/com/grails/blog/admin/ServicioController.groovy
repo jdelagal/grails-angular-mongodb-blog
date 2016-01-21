@@ -11,15 +11,16 @@ class ServicioController {
 
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
-    static allowedMethods = [index: "GET",  delete: "DELETE"]
+    static allowedMethods = [delete: "DELETE"]
 
     def index(Integer max, Integer offset) {
         params.max = Math.min(max ?: 40, 50)
         params.offset = offset?:0
         def servicioList = Servicio.findAll()
 
-        //respond servicioList.collect{it as Servicio}
-        respond servicioList.collect{it as Servicio}
+        respond servicioList.collect{it as Servicio}.sort {
+            it.servicio
+        }
     }
 
     @Transactional
@@ -28,7 +29,8 @@ class ServicioController {
             notFound()
             return
         }
-        paramList.delete()
+        paramList.delete
+        render status: NO_CONTENT
     }    
 
     protected void notFound() {

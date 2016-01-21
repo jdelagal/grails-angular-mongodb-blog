@@ -23,7 +23,7 @@
         </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="servicio in servicios | filter: searchBoxServicio | orderBy: orderPropServicio ">
+            <tr ng-repeat="servicio in servicios | filter: searchBoxServicio ">
                 <td>{{servicio.servicio}}</td>
                 <td>{{servicio.responsableServicio}}</td>
                 <td>{{servicio.emailContacto}}</td>
