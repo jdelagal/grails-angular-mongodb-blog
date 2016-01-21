@@ -1,0 +1,55 @@
+<div class="page-header">
+    <h3 class="alert alert-info">Buscar
+    <input type="text" size="20" ng-model="searchBox">
+    </h3>  
+</div>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <h4 class="pull-left">Lista de Servicios</h4>
+        <div class="pull-right">
+            <a class="btn btn-primary" href="#posts/create"><i class="glyphicon glyphicon-plus"></i> Añadir</a>
+        </div>
+    </div>
+    <!-- Table -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Responsable Funcional</th>
+            <th>Email de Contacto</th>
+            <th>Estado</th>
+            <th class="text-right">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="servicio in servicios">
+                <td>{{servicio.servicio}}</td>
+                <td>{{servicio.responsableServicio}}</td>
+                <td>{{servicio.emailContacto}}</td>
+                <td>{{servicio.estado}}</td>
+                <td>
+                    <!-- Single button -->
+                    <div class="btn-group btn-group-sm pull-right" dropdown>
+                        <button type="button" class="btn btn-default dropdown-toggle">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#posts/{{post.id}}/edit"><i class="glyphicon glyphicon-edit"></i>
+                                    Edit
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" data-method="delete" confirmation-needed href="" ng-click="deletePost($index,post.id)"><i class="glyphicon glyphicon-trash"></i>
+                                    Delete
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

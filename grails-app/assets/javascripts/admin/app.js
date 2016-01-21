@@ -16,6 +16,10 @@ gambApp.config(['$routeProvider',
     function ($routeProvider) {
         $routeProvider.
             when('/', {
+                templateUrl: 'views/servicio/list.html',
+                controller: 'ServicioListController'
+            }).        
+            when('/dashboard', {
                 templateUrl: 'views/dashboard/index.html',
                 controller: 'DashboardController'
             }).
@@ -23,10 +27,10 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/auth/login.html',
                 controller: 'LoginController'
             }).
-            when('/pages', {
-                templateUrl: 'views/page/list.html',
-                controller: 'PageListController'
-            }).            
+            when('/servicios', {
+                templateUrl: 'views/servicio/list.html',
+                controller: 'ServicioListController'
+            }).          
             when('/users/profile', {
                 templateUrl: 'views/user/edit.html',
                 controller: 'UserDetailController'
@@ -36,7 +40,7 @@ gambApp.config(['$routeProvider',
                 controller: 'UserPasswordController'
             }).
             otherwise({
-                redirectTo: '/'
+                redirectTo: '/servicios'
             });
     }]);
 

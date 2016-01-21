@@ -10,6 +10,7 @@ class UrlMappings {
         "/admin/v1/dashboard"(controller: 'dashboard', namespace: 'adminV1')
         "/admin/v1/users/$action?"(controller: 'usuario', namespace: 'adminV1')
         "/admin/v1/pages"(resources: 'page', namespace: 'adminV1')
+        "/admin/v1/servicios"(resources: 'servicio', namespace: 'adminV1')
         
         "/"(view:"/error")
         "/admin"(view:"/admin/index")

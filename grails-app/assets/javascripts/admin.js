@@ -22,6 +22,8 @@
 //= require admin/posts/PostService
 //= require admin/users/UserController
 //= require admin/users/UserService
+//= require admin/servicios/ServicioController
+//= require admin/servicios/ServicioService
 //= require admin/directives
 //= require_tree views
 //= require_self
