@@ -8,7 +8,7 @@
     <div class="panel-heading">
         <h4 class="pull-left">Lista de Servicios</h4>
         <div class="pull-right">
-            <a class="btn btn-primary" href="#posts/create"><i class="glyphicon glyphicon-plus"></i> Añadir</a>
+            <a class="btn btn-primary" href="#servicios/create"><i class="glyphicon glyphicon-plus"></i> Añadir</a>
         </div>
     </div>
     <!-- Table -->
@@ -17,7 +17,7 @@
         <tr>
             <th>Nombre</th>
             <th>Responsable Dominio</th>
-            <th>Email de Contacto</th>
+            <th>Email</th>
             <th>Estado</th>
             <th class="text-right">Actions</th>
         </tr>
@@ -37,13 +37,13 @@
                         </button>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="#posts/{{post.id}}/edit"><i class="glyphicon glyphicon-edit"></i>
-                                    Edit
+                                <a href="#servicios/{{servicio.id}}/edit"><i class="glyphicon glyphicon-edit"></i>
+                                    Editar
                                 </a>
                             </li>
                             <li>
-                                <a rel="nofollow" data-method="delete" confirmation-needed href="" ng-click="deletePost($index,post.id)"><i class="glyphicon glyphicon-trash"></i>
-                                    Delete
+                                <a rel="nofollow" data-method="delete" confirmation-needed href="" ng-click="deleteServicio(servicio.id)"><i class="glyphicon glyphicon-trash"></i>
+                                    Borrar
                                 </a>
                             </li>
                         </ul>
