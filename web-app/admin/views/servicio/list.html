@@ -1,6 +1,6 @@
 <div class="page-header">
     <h4 class="alert alert-info">Buscar
-    <input type="text" size="20" ng-model="searchBox">
+    <input type="text" size="20" ng-model="searchBoxServicio">
     </h4>  
 </div>
 <div class="panel panel-default">
@@ -16,14 +16,14 @@
         <thead>
         <tr>
             <th>Nombre</th>
-            <th>Responsable Funcional</th>
+            <th>Responsable Dominio</th>
             <th>Email de Contacto</th>
             <th>Estado</th>
             <th class="text-right">Actions</th>
         </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="servicio in servicios">
+            <tr ng-repeat="servicio in servicios | filter: searchBoxServicio | orderBy: orderPropServicio ">
                 <td>{{servicio.servicio}}</td>
                 <td>{{servicio.responsableServicio}}</td>
                 <td>{{servicio.emailContacto}}</td>

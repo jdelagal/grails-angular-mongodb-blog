@@ -16,9 +16,10 @@ class ServicioController {
     def index(Integer max, Integer offset) {
         params.max = Math.min(max ?: 40, 50)
         params.offset = offset?:0
-        def servicioList = Servicio.findAll()  
+        def servicioList = Servicio.findAll()
+
         //respond servicioList.collect{it as Servicio}
-        respond servicioList
+        respond servicioList.collect{it as Servicio}
     }
 }
 
