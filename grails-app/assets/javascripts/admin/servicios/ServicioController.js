@@ -26,7 +26,7 @@ servicioController.controller('ServicioListController', ['$scope','ServicioApi',
     }]);
 
 servicioController.controller('ServicioDetailController', ['$scope', '$routeParams', '$location', 'ServicioApi',
-    function ($scope, $routeParams, $location, PostApi) {
+    function ($scope, $routeParams, $location, ServicioApi) {
         $scope.servicio = {}
         $scope.saveServicio = function () {
             console.log("Admin añadiendo servicio", $scope.servicio);

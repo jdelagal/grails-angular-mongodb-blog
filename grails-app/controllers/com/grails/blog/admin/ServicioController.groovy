@@ -11,7 +11,7 @@ class ServicioController {
 
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
-    static allowedMethods = [delete: "DELETE"]
+    static allowedMethods = [delete: "DELETE", save: "POST"]
 
     def index(Integer max, Integer offset) {
         params.max = Math.min(max ?: 40, 50)
@@ -40,7 +40,7 @@ class ServicioController {
             return
         }
 
-        if (postInstance.hasErrors()) {
+        if (servicioInstance.hasErrors()) {
             respond servicioInstance.errors, view:'create'
             return
         }
