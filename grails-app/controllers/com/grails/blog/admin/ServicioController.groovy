@@ -29,12 +29,30 @@ class ServicioController {
             notFound()
             return
         }
-        paramList.delete
+        paramList.delete()
         render status: NO_CONTENT
+    }    
+
+    @Transactional
+    def save(Servicio servicioInstance) {
+        if (servicioInstance == null) {
+            notFound()
+            return
+        }
+
+        if (postInstance.hasErrors()) {
+            respond servicioInstance.errors, view:'create'
+            return
+        }
+
+        servicioInstance.save flush:true
+
+        respond servicioInstance, [status: CREATED]
     }    
 
     protected void notFound() {
         render status: NOT_FOUND
     }    
+
 }
 
