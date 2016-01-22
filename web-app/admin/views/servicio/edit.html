@@ -1,0 +1,51 @@
+<div class="page-header">
+    <h4>Editar Servicio</h4>
+</div>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"></div>
+    <div class="form-admin">
+        <div class="alert alert-danger" ng-show="servicio.errors">
+            <h4 class="alert-heading">
+                Please fix the following errors:
+            </h4>
+            <ul>
+                <li ng-repeat="error in servicio.errors">{{error.message}}</li>
+            </ul>
+
+        </div>
+        <form class="form-horizontal" role="form" method="servicio" ng-submit="updateServicio()">
+            <input type="hidden" name="id" ng-model="servicio.id" />        
+            <div class="form-group">
+                <label for="title" class="col-lg-2 control-label">Nombre</label>
+                <div class="col-lg-6">
+                    <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" ng-model="servicio.servicio">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="slug" class="col-lg-2 control-label">Responsable</label>
+                <div class="col-lg-6">
+                    <input type="text" name="responsable" class="form-control" id="responsable" placeholder="Responsable Dominio" ng-model="servicio.responsableServicio">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="slug" class="col-lg-2 control-label">Email</label>
+                <div class="col-lg-6">
+                    <input type="text" name="emailContacto" class="form-control" id="slug" placeholder="Email Responsable Dominio" ng-model="servicio.emailContacto">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="slug" class="col-lg-2 control-label">Estado</label>
+                <div class="col-lg-6">
+                    <input type="text" name="estado" class="form-control" id="estado" placeholder="Estado del Servicio" ng-model="servicio.estado">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-offset-2 col-lg-10">
+                    <button type="submit" data-loading-text="Guardando..." class="btn btn-primary">Guardar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
