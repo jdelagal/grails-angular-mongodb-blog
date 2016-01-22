@@ -28,8 +28,15 @@ servicioController.controller('ServicioListController', ['$scope','ServicioApi',
 servicioController.controller('ServicioDetailController', ['$scope', '$routeParams', '$location', 'ServicioApi',
     function ($scope, $routeParams, $location, ServicioApi) {
         $scope.servicio = {}
+
+        if ($routeParams.servicioId) {
+            ServicioApi.Servicio.get({servicioId: $routeParams.servicioId}, function (servicio) {
+                console.log("Servicio Object.")
+                $scope.servicio = servicio
+            });
+        }        
         $scope.saveServicio = function () {
-            console.log("Admin añadiendo servicio", $scope.servicio);
+            console.log("Admin añadiendo Servicio", $scope.servicio);
             var servicio = $scope.servicio;
             var res = ServicioApi.Servicio.save({}, servicio,
                 function (resp) {
@@ -41,4 +48,18 @@ servicioController.controller('ServicioDetailController', ['$scope', '$routePara
                 });
             console.log(res);
         };
+
+        $scope.updateServicio = function () {
+            console.log("Admin actualizando servicio", $scope.servicio);
+            var servicio = $scope.servicio;
+            var res = ServicioApi.Servicio.update({servicioId: $scope.servicio.id}, servicio,
+                function (resp) {
+                    console.log("success " + resp);
+                    $location.path('/servicios/');
+                }, function (resp) {
+                    console.log("failure errors " + Object.keys(resp));
+                    $scope.servicio.errors = resp.data.errors;
+                });
+            console.log(res);
+        };        
     }]);
