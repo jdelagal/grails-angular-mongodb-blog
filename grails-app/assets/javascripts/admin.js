@@ -24,6 +24,8 @@
 //= require admin/users/UserService
 //= require admin/servicios/ServicioController
 //= require admin/servicios/ServicioService
+//= require admin/dominios/DominioController
+//= require admin/dominios/DominioService
 //= require admin/directives
 //= require_tree views
 //= require_self
