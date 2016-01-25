@@ -13,9 +13,10 @@ class ServicioController {
     static responseFormats = ['json', 'xml']
     static allowedMethods = [delete: "DELETE", save: "POST", update: "PUT"]
 
-    def index(Integer max, Integer offset) {
-        params.max = Math.min(max ?: 40, 50)
-        params.offset = offset?:0
+    //def index(Integer max, Integer offset) {
+    //    params.max = Math.min(max ?: 40, 50)
+    //    params.offset = offset?:0
+    def index() {
         def servicioList = Servicio.findAll()
 
         respond servicioList.collect{it as Servicio}.sort {
