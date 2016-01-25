@@ -68,7 +68,7 @@ gambApp.directive('confirmationNeeded', function () {
         priority: 1,
         terminal: true,
         link: function (scope, element, attrs) {
-            var msg = attrs.confirmationNeeded || "Are you sure?";
+            var msg = attrs.confirmationNeeded || "¿Está seguro que desea borrar el registro?";
             var clickAction = attrs.ngClick;
             element.bind('click', function () {
                 if (window.confirm(msg)) {
