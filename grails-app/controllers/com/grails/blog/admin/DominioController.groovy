@@ -22,6 +22,16 @@ class DominioController {
         }
     }
 
+    @Transactional
+    def delete(Dominio paramList) {
+        if (paramList == null) {
+            notFound()
+            return
+        }
+        paramList.delete()
+        render status: NO_CONTENT
+    }  
+
     protected void notFound() {
         render status: NOT_FOUND
     }    

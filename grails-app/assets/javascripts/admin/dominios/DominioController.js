@@ -11,12 +11,12 @@ dominioController.controller('DominioListController', ['$scope','DominioApi', '$
         console.log("Cargando Dominios ", $scope.dominios);
 
         $scope.deleteDominio= function (id) {
-            console.log("Borrando Servicio ", id);
-            ServicioApi.Servicio.delete({servicioId: id},
+            console.log("Borrando Dominio ", id);
+            DominioApi.Dominio.delete({dominioId: id},
                 function (resp) {
                 	console.log ("traza id: "+ id);
                     console.log("success " + resp);
-                    $location.path('/servicios/');
+                    $location.path('/dominios/');
                 }, function (resp) {
                     console.log("failure errors " + Object.keys(resp));
                 });
