@@ -7,6 +7,7 @@ import static org.springframework.http.HttpStatus.*
 
 @Transactional(readOnly = true)
 class ServicioController {
+    
     def springSecurityService
 
     static namespace = 'adminV1'

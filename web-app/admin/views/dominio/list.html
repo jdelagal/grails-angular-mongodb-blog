@@ -1,14 +1,14 @@
 <div class="page-header">
     <h4 class="alert alert-info">Buscar
-    <input type="text" size="20" ng-model="searchBoxServicio">
+    <input type="text" size="20" ng-model="searchBoxDominio">
     </h4>  
 </div>
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">
-        <h4 class="pull-left">Lista de Servicios</h4>
+        <h4 class="pull-left">Lista de Dominios</h4>
         <div class="pull-right">
-            <a class="btn btn-primary" href="#servicios/create"><i class="glyphicon glyphicon-plus"></i> Añadir</a>
+            <a class="btn btn-primary" href="#dominios/create"><i class="glyphicon glyphicon-plus"></i> Añadir</a>
         </div>
     </div>
     <!-- Table -->
@@ -17,17 +17,15 @@
         <tr>
             <th>Nombre</th>
             <th>Responsable</th>
-            <th>Email</th>
-            <th>Estado</th>
+            <th>Responsable Operaciones</th>
             <th class="text-right">Acciones</th>
         </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="servicio in servicios | filter: searchBoxServicio ">
-                <td>{{servicio.servicio}}</td>
-                <td>{{servicio.responsableServicio}}</td>
-                <td>{{servicio.emailContacto}}</td>
-                <td>{{servicio.estado}}</td>
+            <tr ng-repeat="dominio in dominios | filter: searchBoxDominio ">
+                <td>{{dominio.dominio}}</td>
+                <td>{{dominio.responsableDominio}}</td>
+                <td>{{dominio.responsableOperaciones}}</td>
                 <td>
                     <!-- Single button -->
                     <div class="btn-group btn-group-sm pull-right" dropdown>
@@ -37,12 +35,12 @@
                         </button>
                         <ul class="dropdown-menu" role="menu">
                             <li>
-                                <a href="#servicios/{{servicio.id}}/edit"><i class="glyphicon glyphicon-edit"></i>
+                                <a href="#dominios/{{dominio.id}}/edit"><i class="glyphicon glyphicon-edit"></i>
                                     Editar
                                 </a>
                             </li>
                             <li>
-                                <a rel="nofollow" data-method="delete" confirmation-needed href="" ng-click="deleteServicio(servicio.id)"><i class="glyphicon glyphicon-trash"></i>
+                                <a rel="nofollow" data-method="delete" confirmation-needed href="" ng-click="deleteDominio(dominio.id)"><i class="glyphicon glyphicon-trash"></i>
                                     Borrar
                                 </a>
                             </li>
