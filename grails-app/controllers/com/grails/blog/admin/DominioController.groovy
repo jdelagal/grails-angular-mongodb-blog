@@ -32,6 +32,23 @@ class DominioController {
         render status: NO_CONTENT
     }  
 
+    @Transactional
+    def save(Dominio dominioInstance) {
+        if (dominioInstance == null) {
+            notFound()
+            return
+        }
+
+        if (dominioInstance.hasErrors()) {
+            respond dominioInstance.errors, view:'create'
+            return
+        }
+
+        dominioInstance.save flush:true
+
+        respond dominioInstance, [status: CREATED]
+    }   
+
     protected void notFound() {
         render status: NOT_FOUND
     }    
