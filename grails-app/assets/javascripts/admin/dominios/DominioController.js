@@ -28,7 +28,7 @@ dominioController.controller('DominioDetailController', ['$scope', '$routeParams
     function ($scope, $routeParams, $location, DominioApi) {
         $scope.dominio = {}
 
-        if ($routeParams.servicioId) {
+        if ($routeParams.dominioId) {
             DominioApi.Dominio.get({dominioId: $routeParams.dominioId}, function (dominio) {
                 console.log("Dominio Object ")
                 $scope.dominio = dominio
@@ -48,7 +48,7 @@ dominioController.controller('DominioDetailController', ['$scope', '$routeParams
             console.log(res);
         };
 
-        $scope.updateServicio = function () {
+        $scope.updateDominio = function () {
             console.log("Admin actualizando Dominio ", $scope.dominio);
             var dominio = $scope.dominio;
             var res = DominioApi.Dominio.update({dominioId: $scope.dominio.id}, dominio,

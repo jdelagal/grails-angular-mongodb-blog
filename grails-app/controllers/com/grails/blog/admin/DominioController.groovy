@@ -49,6 +49,27 @@ class DominioController {
         respond dominioInstance, [status: CREATED]
     }   
 
+    def show(String id) {
+        Dominio dominioInstance = Dominio.findById(id) as Dominio
+        respond dominioInstance, [excludes: ['class']]
+    }  
+    
+    @Transactional
+    def update(Dominio dominioInstance) {
+        if (dominioInstance == null) {
+            notFound()
+            return
+        }
+
+        if (dominioInstance.hasErrors()) {
+            respond dominioInstance.errors, view:'edit'
+            return
+        }
+
+        dominioInstance.save flush:true
+
+        respond dominioInstance, [status: OK]
+    }
     protected void notFound() {
         render status: NOT_FOUND
     }    

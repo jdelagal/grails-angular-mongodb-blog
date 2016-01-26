@@ -46,7 +46,11 @@ gambApp.config(['$routeProvider',
             when('/dominios/create', {
                 templateUrl: 'views/dominio/create.html',
                 controller: 'DominioDetailController'
-            }).                                               
+            }).   
+            when('/dominios/:dominioId/edit', {
+                templateUrl: 'views/dominio/edit.html',
+                controller: 'DominioDetailController'
+            }).                                                         
             when('/users/profile', {
                 templateUrl: 'views/user/edit.html',
                 controller: 'UserDetailController'
