@@ -23,10 +23,6 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/dashboard/index.html',
                 controller: 'DashboardController'
             }).
-            when('/dominio', {
-                templateUrl: 'views/dominio/index.html',
-                controller: 'DominioController'
-            }).            
             when('/login', {
                 templateUrl: 'views/auth/login.html',
                 controller: 'LoginController'
