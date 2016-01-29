@@ -6,39 +6,64 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Catálogo</a>
+            <ul class="nav navbar-nav">
+                <li><a href="#"><i class="glyphicon glyphicon-home"></i>  Inicio</a></li>
+            </ul>
         </div>
         <nav class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="#"><i class="glyphicon glyphicon-home"></i> Inicio</a></li>
-            </ul>
-
+            <ul class="nav navbar-nav navbar-left">
+                <li class="dropdown user-avatar">
+                    <a data-toggle="dropdown" class="dropdown-toggle">
+                        <span>
+                            <span>
+                                <i class="glyphicon glyphicon-folder-open"> Entidades</i>
+                                <i class="caret"></i>
+                            </span>
+                        </span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#dominios"><i class="glyphicon glyphicon-eye-open"></i>
+                                <span>Dominios</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#servicios"><i class="glyphicon glyphicon-eye-open"></i>
+                                <span>Servicios</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
+            </ul>            
             <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown user-avatar">
                     <a data-toggle="dropdown" class="dropdown-toggle">
                         <span>
                             <span>
-                                {{user.name}}
+                                <i class="glyphicon glyphicon-user"></i>
                                 <i class="caret"></i>
                             </span>
                         </span>
-                    </a><ul class="dropdown-menu">
-                    <li>
-                        <a href="#users/profile"><i class="glyphicon glyphicon-user"></i>
-                            <span>Editar Perfil</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#users/password"><i class="glyphicon glyphicon-wrench"></i>
-                            <span>Actualizar Password</span>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i>
-                            <span>Salir</span>
-                        </a>
-                    </li>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#users/profile"><i class="glyphicon glyphicon-user"></i>
+                                <span>Editar Perfil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#users/password"><i class="glyphicon glyphicon-wrench"></i>
+                                <span>Actualizar Password</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a ng-click="logout()"><i class="glyphicon glyphicon-log-out"></i>
+                                <span>Salir</span>
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </nav><!--/.nav-collapse -->

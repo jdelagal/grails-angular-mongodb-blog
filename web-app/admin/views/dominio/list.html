@@ -1,15 +1,14 @@
 <div class="page-header">
+</div>
+<div class="page-info">
     <h4 class="alert alert-info">Buscar
-    <input type="text" size="20" ng-model="searchBoxDominio">
+        <input type="text" size="20" ng-model="searchBoxDominio">
     </h4>  
 </div>
 <div class="panel panel-default">
     <!-- Default panel contents -->
     <div class="panel-heading">
         <h4 class="pull-left">Lista de Dominios</h4>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="#dominios/create"><i class="glyphicon glyphicon-plus"></i> Añadir</a>
-        </div>
     </div>
     <!-- Table -->
     <table class="table table-striped">
@@ -44,6 +43,11 @@
                                     Borrar
                                 </a>
                             </li>
+                            <li>
+                                <a href="#dominios/create"><i class="glyphicon glyphicon-plus"></i>
+                                    Dominio
+                                </a>
+                            </li>                             
                             <li>
                                 <a href="#servicios/{{dominio.id}}/create"><i class="glyphicon glyphicon-plus"></i>
                                     Servicio
