@@ -31,10 +31,10 @@ gambApp.config(['$routeProvider',
                 templateUrl: 'views/servicio/list.html',
                 controller: 'ServicioListController'
             }). 
-            when('/servicios/create', {
+            when('/servicios/:dominioId/create', {
                 templateUrl: 'views/servicio/create.html',
                 controller: 'ServicioDetailController'
-            }).     
+            }).              
             when('/servicios/:servicioId/edit', {
                 templateUrl: 'views/servicio/edit.html',
                 controller: 'ServicioDetailController'
@@ -50,7 +50,7 @@ gambApp.config(['$routeProvider',
             when('/dominios/:dominioId/edit', {
                 templateUrl: 'views/dominio/edit.html',
                 controller: 'DominioDetailController'
-            }).                                                         
+            }).  
             when('/users/profile', {
                 templateUrl: 'views/user/edit.html',
                 controller: 'UserDetailController'

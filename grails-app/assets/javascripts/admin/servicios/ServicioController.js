@@ -28,17 +28,21 @@ servicioController.controller('ServicioListController', ['$scope','ServicioApi',
 servicioController.controller('ServicioDetailController', ['$scope', '$routeParams', '$location', 'ServicioApi',
     function ($scope, $routeParams, $location, ServicioApi) {
         $scope.servicio = {}
+        $scope.dominio = {}
 
         if ($routeParams.servicioId) {
             ServicioApi.Servicio.get({servicioId: $routeParams.servicioId}, function (servicio) {
                 console.log("Servicio Object.")
                 $scope.servicio = servicio
             });
-        }        
+        }
+
         $scope.saveServicio = function () {
             console.log("Admin añadiendo Servicio", $scope.servicio);
             var servicio = $scope.servicio;
-            var res = ServicioApi.Servicio.save({}, servicio,
+            servicio.dominio = $routeParams.dominioId
+            console.log("servicio.dominioId", servicio.dominio);
+            var res = ServicioApi.Servicio.save({dominio: servicio.dominio}, servicio,
                 function (resp) {
                     console.log("success " + resp);
                     $location.path('/servicios/');

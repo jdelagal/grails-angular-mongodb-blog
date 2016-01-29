@@ -8,7 +8,7 @@ class Servicio {
     String emailContacto
     String estado
 
-
+    static belongsTo = [dominio: Dominio]
     /*
     static hasMany = [entregable: Entregable, consumidor: Consumidor, estado: EstadoServicio]
     static belongsTo = [dominio: Dominio]
