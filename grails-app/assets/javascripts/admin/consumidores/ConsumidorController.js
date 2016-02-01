@@ -24,3 +24,32 @@ consumidorController.controller('ConsumidorListController', ['$scope','Consumido
         };
 
     }]);
+
+consumidorController.controller('ConsumidorDetailController', ['$scope', '$routeParams', '$location', 'ConsumidorApi',
+    function ($scope, $routeParams, $location, ConsumidorApi) {
+        $scope.consumidor = {}
+        $scope.servicio = {}
+
+        if ($routeParams.consumidorId) {
+            ConsumidorApi.Consumidor.get({consumidorId: $routeParams.consumidorId}, function (consumidor) {
+                console.log("Consumidor Object.");
+                $scope.consumidor = consumidor;
+            });
+        }
+
+        //aqui el alta
+
+        $scope.updateConsumidor = function () {
+            console.log("Admin actualizando consumidor ", $scope.consumidor);
+            var consumidor = $scope.consumidor;
+            var res = ConsumidorApi.Consumidor.update({consumidorId: $scope.consumidor.id}, consumidor,
+                function (resp) {
+                    console.log("success " + resp);
+                    $location.path('/consumidores/');
+                }, function (resp) {
+                    console.log("failure errors " + Object.keys(resp));
+                    $scope.consumidor.errors = resp.data.errors;
+                });
+            console.log(res);
+        };   
+    }]);
