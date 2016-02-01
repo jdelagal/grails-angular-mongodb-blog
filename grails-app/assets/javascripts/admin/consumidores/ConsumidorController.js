@@ -37,7 +37,21 @@ consumidorController.controller('ConsumidorDetailController', ['$scope', '$route
             });
         }
 
-        //aqui el alta
+        $scope.saveConsumidor = function () {
+            console.log("Admin añadiendo Consumidor", $scope.consumidor);
+            var consumidor = $scope.consumidor;
+            consumidor.servicio = $routeParams.servicioId
+            console.log("consumidor.servicioId", consumidor.servicio);
+            var res = ConsumidorApi.Consumidor.save({servicio: consumidor.servicio}, consumidor,
+                function (resp) {
+                    console.log("success " + resp);
+                    $location.path('/consumidores/');
+                }, function (resp) {
+                    console.log("failure errors " + Object.keys(resp));
+                    $scope.consumidor.errors = resp.data.errors;
+                });
+            console.log(res);
+        };
 
         $scope.updateConsumidor = function () {
             console.log("Admin actualizando consumidor ", $scope.consumidor);

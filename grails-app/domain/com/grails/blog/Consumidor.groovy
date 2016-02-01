@@ -8,12 +8,20 @@ class Consumidor {
     String emailContacto
     String canal
     String estado
+
+    static belongsTo = [servicio: Servicio]
+
+    static constraints = {
+        consumidor blank: false, unique: true
+    }
     /*
+
     static hasMany = [necesidades: Necesidad, estados: EstadoConsumidor]
     static belongsTo = [servicio: Servicio]
 
     static constraints = {
 		consumidor blank: false, unique: true
 	}
+    
 	*/
 }
