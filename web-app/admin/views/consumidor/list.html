@@ -1,0 +1,56 @@
+<div class="page-header">
+</div>
+<div class="page-info">
+    <h4 class="alert alert-info">Buscar
+        <input type="text" size="20" ng-model="searchBoxConsumidor">
+    </h4>  
+</div>
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <h4 class="pull-left">Lista de Consumidores</h4>
+    </div>
+    <!-- Table -->
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Responsable</th>
+            <th>Email</th>
+            <th>Canal</th>
+            <th>Estado</th>
+            <th class="text-right">Acciones</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="consumidor in consumidores | filter: searchBoxConsumidor ">
+                <td>{{consumidor.consumidor}}</td>
+                <td>{{consumidor.responsableConsumidor}}</td>
+                <td>{{consumidor.emailContacto}}</td>
+                <td>{{consumidor.canal}}</td>
+                <td>{{consumidor.estado}}</td>
+                <td>
+                    <!-- Single button -->
+                    <div class="btn-group btn-group-sm pull-right" dropdown>
+                        <button type="button" class="btn btn-default dropdown-toggle">
+                            <i class="glyphicon glyphicon-cog"></i>
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="#consumidores/{{consumidor.id}}/edit"><i class="glyphicon glyphicon-edit"></i>
+                                    Editar
+                                </a>
+                            </li>
+                            <li>
+                                <a rel="nofollow" data-method="delete" confirmation-needed href="" ng-click="deleteConsumidor(consumidor.id)"><i class="glyphicon glyphicon-trash"></i>
+                                    Borrar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

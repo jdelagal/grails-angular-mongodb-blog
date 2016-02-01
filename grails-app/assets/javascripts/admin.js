@@ -26,6 +26,8 @@
 //= require admin/servicios/ServicioService
 //= require admin/dominios/DominioController
 //= require admin/dominios/DominioService
+//= require admin/consumidores/ConsumidorController
+//= require admin/consumidores/ConsumidorService
 //= require admin/directives
 //= require_tree views
 //= require_self
