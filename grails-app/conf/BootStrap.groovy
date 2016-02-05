@@ -1,4 +1,3 @@
-import com.grails.blog.BlogSetting
 import com.grails.blog.auth.Role
 import com.grails.blog.auth.Usuario
 

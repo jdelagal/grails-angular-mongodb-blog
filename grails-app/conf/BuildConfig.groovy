@@ -59,6 +59,8 @@ grails.project.dependency.resolution = {
 
         // plugins for the compile step
         //compile ":mongodb:3.0.0"
+        compile "org.grails.plugins:cxf:1.1.4"
+        compile "org.grails.plugins:wslite:0.7.2.0"
         compile ":asset-pipeline:1.8.7"
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.2'
