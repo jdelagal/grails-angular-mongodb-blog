@@ -28,6 +28,8 @@
 //= require admin/dominios/DominioService
 //= require admin/consumidores/ConsumidorController
 //= require admin/consumidores/ConsumidorService
+//= require admin/soap/angular.soap
+//= require admin/soap/soapclient
 //= require admin/directives
 //= require_tree views
 //= require_self

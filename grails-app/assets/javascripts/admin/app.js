@@ -9,7 +9,8 @@ var gambApp = angular.module('gambApp', [
     'ngResource',
     'ui.bootstrap',
     'angulartics',
-    'angulartics.google.analytics'
+    'angulartics.google.analytics',
+    'angularSoap'
 ]);
 
 gambApp.config(['$routeProvider',
