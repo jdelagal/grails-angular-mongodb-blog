@@ -51,6 +51,7 @@ grails.project.dependency.resolution = {
         // specify dependencies here under either 'build', 'compile', 'runtime', 'test' or 'provided' scopes e.g.
         // runtime 'mysql:mysql-connector-java:5.1.27'
         // runtime 'org.postgresql:postgresql:9.3-1100-jdbc41'
+        //runtime 'com.github.groovy-wslite:groovy-wslite:1.1.2'
     }
 
     plugins {
@@ -60,6 +61,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         //compile ":mongodb:3.0.0"
         compile "org.grails.plugins:cxf:1.1.4"
+        compile "org.grails.plugins:cxf-client:2.1.2"
         compile "org.grails.plugins:wslite:0.7.2.0"
         compile ":asset-pipeline:1.8.7"
         compile ":scaffolding:2.0.3"
