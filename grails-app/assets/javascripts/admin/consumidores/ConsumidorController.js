@@ -4,8 +4,8 @@
 
 var consumidorController = angular.module('gambApp');
 
-consumidorController.controller('ConsumidorListController', ['$scope','ConsumidorApi', '$location', 'testService',
-    function ($scope, ConsumidorApi, $location, testService) {
+consumidorController.controller('ConsumidorListController', ['$scope','ConsumidorApi', '$location', 
+    function ($scope, ConsumidorApi, $location) {
 
        	$scope.consumidores = ConsumidorApi.Consumidor.query() ;
 
@@ -23,11 +23,6 @@ consumidorController.controller('ConsumidorListController', ['$scope','Consumido
                 });
         };
 
-        console.log("Intento de llamada soap ");
-        testService.Process().then(function(response){
-           $scope.response = response;
-           console.log ('response '+response);
-        });
     }]);
 
 consumidorController.controller('ConsumidorDetailController', ['$scope', '$routeParams', '$location', 'ConsumidorApi',
