@@ -1,0 +1,134 @@
+Apache CXF 3.1.5 Release Notes
+
+1. Overview
+
+The 3.1.5 version of Apache CXF is a significant new version of CXF 
+that provides several new features and enhancements.  
+
+New features include: 
+
+* New Metrics feature for collecting metrics about a CXF services.  
+* New Throttling feature for easily throttling CXF services.  
+* New Logging feature for more advanced logging than the logging 
+  available in cxf-core
+* New Metadata service for SAML SSO to allow you to publish SAML SSO 
+  metadata for your service provider.
+* Enhancements to the code generator to be more "Java7" friendly
+* Update to OpenSAML 3.0
+* Support for Karaf 4, Jetty 9
+
+Important notes:
+CXF 3.1.x no longer supports Java 6.   You must upgrade to Java 7 or later.
+
+Users are encourage to review the migration guide at:
+http://cxf.apache.org/docs/31-migration-guide.html
+for further information and requirements for upgrading from earlier
+versions of CXF.
+
+3.1.4 fixes over 50 JIRA issues reported by users and the community.
+
+
+
+2. Installation Prerequisites 
+
+Before installing Apache CXF, make sure the following products,
+with the specified versions, are installed on your system:
+
+    * Java 7 Development Kit
+    * Apache Maven 3.x to build the samples
+
+
+3.  Integrating CXF Into Your Application
+
+If you use Maven to build your application, you need merely add
+appropriate dependencies. See the pom.xml files in the samples.
+
+If you don't use Maven, you'll need to add one or more jars to your
+classpath. The file lib/WHICH_JARS should help you decide which 
+jars you need.
+
+4. Building the Samples
+
+Building the samples included in the binary distribution is easy. Change to
+the samples directory and follow the build instructions in the README.txt file 
+included with each sample.
+
+5. Reporting Problems
+
+If you have any problems or want to send feedback of any kind, please e-mail the
+CXF dev list, dev@cxf.apache.org.  You can also file issues in JIRA at:
+
+http://issues.apache.org/jira/browse/CXF
+
+6. Migration notes:
+
+See the migration guide at:
+http://cxf.apache.org/docs/31-migration-guide.html
+for caveats when upgrading from CXF 2.7.x and 3.0.x
+to 3.1.
+
+
+
+7. Specific issues, features, and improvements fixed in this version
+
+
+** Bug
+    * [CXF-6172] - WS-Discovery should work also in IPv6 only environment
+    * [CXF-6574] -  Issue with Digest Authentication
+    * [CXF-6660] - SamlTokenInterceptor Jasypt decryption
+    * [CXF-6664] - NullpointerException in LinkBuilderImpl#getResolvedUri when linkheader url has a matrix parameter
+    * [CXF-6667] - Closing a source sequence in WS-RM may lead to inconsistent sequence status
+    * [CXF-6668] - [wadl2java] @Multipart annotation generated, @QueryParam expected
+    * [CXF-6670] - Problem with casting ParamConverter responses to primitive types 
+    * [CXF-6671] - Ambiguous JAXRSServerFactoryBean.setApplication() breaks Spring injection
+    * [CXF-6673] - StaticService setEndpoints(List<String>) doesn't work correctly
+    * [CXF-6675] - Update commons-collections from 3.2.1 to 3.2.2
+    * [CXF-6676] - Incorrect Interface Method Name Generation
+    * [CXF-6677] - Content-Type is empty on POST request with empty body 
+    * [CXF-6679] -  @Context HttpServletRequest request.getParameterMap() can't contain post parameters by application/x-www-form-urlencoded
+    * [CXF-6688] - ClientProxyImpl does not populate class-level path params if BeanParam holds the values
+    * [CXF-6693] - CXF fails to parse Cookie header when it contains $ character
+    * [CXF-6694] - SpringResourceFactory does not work with constructor-autowired beans
+    * [CXF-6699] - DefaultAddress not set in HTTPConduit class
+    * [CXF-6701] - JAXRS Proxy impl does not check field JAXRS annotations on BeanParam super classes
+    * [CXF-6705] - Incorrect version in Import-Package for javax.validation for CXF Core
+    * [CXF-6706] - Bean validation seems to not be working in OSGi
+    * [CXF-6709] - HttpServletRequest.getInputStream is empty
+    * [CXF-6711] - Aegis Databinding Deserialization Vulnerability
+    * [CXF-6715] - SAMLProtocolResponseValidator fails to decrypt an assertion
+    * [CXF-6719] - GZIPOutInterceptor enum scope change breaks method contract
+    * [CXF-6720] - AbstractHTTPDestination#WrappedOutputStream.close() calls flush after close
+    * [CXF-6721] - NullPointerException for some responses containing SoapFault. 
+    * [CXF-6729] -  Version 1 NewCookie is not compliant with RFC 2109
+    * [CXF-6730] - ClassCastException TransportBinding cannot be cast to AbstractSymmetricAsymmetricBinding in AbstractBindingBuilder
+    * [CXF-6744] - Exceptions thrown from methods annotated with @Suspended result in no response at all
+    * [CXF-6748] - the qop,nc,algorithm parameter in http auth header must not be enclosed between doble quotation 
+    * [CXF-6749] - Classloader leak on FileUtils.createTmpDir()
+    * [CXF-6753] - OAuth2 audience support is incomplete
+    * [CXF-6754] - Determin Media Type in Response
+    * [CXF-6759] - WADL2JAVA Tools Generated Source has Duplicate Method Name
+    * [CXF-6761] - JAX-RS ClientImpl does not set TLSClientParameters on HTTPConduit when only HostnameVerifier is configured
+    * [CXF-6762] - DefaultHostnameVerifier fails for non-root wildcard SAN DNSName entries
+    * [CXF-6763] - STS requires ClaimHandler even in ClaimMapping only scenarios
+
+** Improvement
+    * [CXF-6610] - Throttling Interceptors can not abort but only delay overflowing requests 
+    * [CXF-6661] - WADLGenerator should optionally include xsi schemaLocation
+    * [CXF-6663] - Scope based authorization support for OAuth2 RS endpoints
+    * [CXF-6686] - Provide AccessTokenValidator RFC7662
+    * [CXF-6690] - WADL2Java should try to split complex XJC parameters
+    * [CXF-6695] - SwaggerFeature: add support for @MatrixParam and @BeanParam
+    * [CXF-6712] - [cxf-java2wadl-plugin] Add parameter encoding to goal parsejavadoc
+    * [CXF-6716] - java2ws should log a warning message for a Holder parameter annoated with WebParam.Mode.IN property
+    * [CXF-6722] - OAuthDataProvider needs to have methods for listing client tokens
+    * [CXF-6732] - Allow SOAPAction to be overwritten via RequestContext property
+    * [CXF-6736] - Support login_hint at OidcClientCodeRequestFilter
+    * [CXF-6738] - Reduce contention on org.apache.cxf.binding.soap.SoapTransportFactory$SoapEndpointInfo
+    * [CXF-6739] - Reduce memory pressure in org.apache.cxf.attachment.AttachmentDeserializer
+
+
+** New Feature
+    * [CXF-6735] - Enable/Disable SecurityTokenReference with configuration for CXF/.NET interoperability
+
+** Wish
+    * [CXF-6704] - Upgrade to httpclient 4.5.x
