@@ -9,7 +9,9 @@ import static org.springframework.http.HttpStatus.*
 class ServicioController {
     
     def springSecurityService
-
+    /*prueba llamada a ProductosService.groovy
+    def productosService
+    */
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
     static allowedMethods = [delete: "DELETE", save: "POST", update: "PUT"]
@@ -20,6 +22,12 @@ class ServicioController {
     def index() {
         def servicioList = Servicio.findAll()
 
+        /*prueba llamada a ProductosService.groovy
+
+        String nombre = productosService.buscarProductos('Pruebas')['nombre']
+        println ": "+nombre
+        */
+    
         respond servicioList.collect{it as Servicio}.sort {
             it.servicio
         }

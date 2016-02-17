@@ -7,6 +7,7 @@ class DashboardController {
 
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
+    def productosService
 
     def index() {
         Dashboard dashboard = new Dashboard()
@@ -17,6 +18,10 @@ class DashboardController {
 
         def instServ = Servicio.findAll()
         println instServ.servicio
+
+        /*prueba llamada a ProductosService.groovy*/
+
+        println ": "+ productosService.buscarProductos('Pruebas')
 
         respond dashboard
     }
