@@ -24,10 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _BuscarProductos_QNAME = new QName("https://franl2p.wordpress.com/", "buscarProductos");
-    private final static QName _BuscarProductoPorIdResponse_QNAME = new QName("https://franl2p.wordpress.com/", "buscarProductoPorIdResponse");
-    private final static QName _BuscarProductoPorId_QNAME = new QName("https://franl2p.wordpress.com/", "buscarProductoPorId");
-    private final static QName _BuscarProductosResponse_QNAME = new QName("https://franl2p.wordpress.com/", "buscarProductosResponse");
+    private final static QName _InventarioResponse_QNAME = new QName("http://blog.soa.ejemplos/Inventario", "inventarioResponse");
+    private final static QName _InventarioRequest_QNAME = new QName("http://blog.soa.ejemplos/Inventario", "inventarioRequest");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.grails.cxf.soap
@@ -37,79 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link BuscarProductoPorIdResponse }
+     * Create an instance of {@link InventarioRequest }
      * 
      */
-    public BuscarProductoPorIdResponse createBuscarProductoPorIdResponse() {
-        return new BuscarProductoPorIdResponse();
+    public InventarioRequest createInventarioRequest() {
+        return new InventarioRequest();
     }
 
     /**
-     * Create an instance of {@link BuscarProductos }
+     * Create an instance of {@link InventarioResponse }
      * 
      */
-    public BuscarProductos createBuscarProductos() {
-        return new BuscarProductos();
+    public InventarioResponse createInventarioResponse() {
+        return new InventarioResponse();
     }
 
     /**
-     * Create an instance of {@link BuscarProductoPorId }
+     * Create an instance of {@link JAXBElement }{@code <}{@link InventarioResponse }{@code >}}
      * 
      */
-    public BuscarProductoPorId createBuscarProductoPorId() {
-        return new BuscarProductoPorId();
+    @XmlElementDecl(namespace = "http://blog.soa.ejemplos/Inventario", name = "inventarioResponse")
+    public JAXBElement<InventarioResponse> createInventarioResponse(InventarioResponse value) {
+        return new JAXBElement<InventarioResponse>(_InventarioResponse_QNAME, InventarioResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link BuscarProductosResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link InventarioRequest }{@code >}}
      * 
      */
-    public BuscarProductosResponse createBuscarProductosResponse() {
-        return new BuscarProductosResponse();
-    }
-
-    /**
-     * Create an instance of {@link ProductoData }
-     * 
-     */
-    public ProductoData createProductoData() {
-        return new ProductoData();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarProductos }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://franl2p.wordpress.com/", name = "buscarProductos")
-    public JAXBElement<BuscarProductos> createBuscarProductos(BuscarProductos value) {
-        return new JAXBElement<BuscarProductos>(_BuscarProductos_QNAME, BuscarProductos.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarProductoPorIdResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://franl2p.wordpress.com/", name = "buscarProductoPorIdResponse")
-    public JAXBElement<BuscarProductoPorIdResponse> createBuscarProductoPorIdResponse(BuscarProductoPorIdResponse value) {
-        return new JAXBElement<BuscarProductoPorIdResponse>(_BuscarProductoPorIdResponse_QNAME, BuscarProductoPorIdResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarProductoPorId }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://franl2p.wordpress.com/", name = "buscarProductoPorId")
-    public JAXBElement<BuscarProductoPorId> createBuscarProductoPorId(BuscarProductoPorId value) {
-        return new JAXBElement<BuscarProductoPorId>(_BuscarProductoPorId_QNAME, BuscarProductoPorId.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link BuscarProductosResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "https://franl2p.wordpress.com/", name = "buscarProductosResponse")
-    public JAXBElement<BuscarProductosResponse> createBuscarProductosResponse(BuscarProductosResponse value) {
-        return new JAXBElement<BuscarProductosResponse>(_BuscarProductosResponse_QNAME, BuscarProductosResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://blog.soa.ejemplos/Inventario", name = "inventarioRequest")
+    public JAXBElement<InventarioRequest> createInventarioRequest(InventarioRequest value) {
+        return new JAXBElement<InventarioRequest>(_InventarioRequest_QNAME, InventarioRequest.class, null, value);
     }
 
 }
