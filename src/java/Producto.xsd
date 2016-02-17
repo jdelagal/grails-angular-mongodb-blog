@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="https://franl2p.wordpress.com/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
+    targetNamespace="https://franl2p.wordpress.com/">
+    
+    <xs:element name="buscarProductoPorId" type="tns:buscarProductoPorId"></xs:element>
+
+    <xs:element name="buscarProductoPorIdResponse" type="tns:buscarProductoPorIdResponse"></xs:element>
+
+    <xs:element name="buscarProductos" type="tns:buscarProductos"></xs:element>
+
+    <xs:element name="buscarProductosResponse" type="tns:buscarProductosResponse"></xs:element>
+
+    <xs:complexType name="buscarProductos">
+        <xs:sequence>
+            <xs:element name="nombre" type="xs:string" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="buscarProductosResponse">
+        <xs:sequence>
+            <xs:element name="productos" type="tns:productoData" minOccurs="0"
+                maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="productoData">
+        <xs:sequence>
+            <xs:element name="productoId" type="xs:string" minOccurs="0"></xs:element>
+            <xs:element name="nombre" type="xs:string" minOccurs="0"></xs:element>
+            <xs:element name="descripcion" type="xs:string" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="buscarProductoPorId">
+        <xs:sequence>
+            <xs:element name="productoId" type="xs:string" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="buscarProductoPorIdResponse">
+        <xs:sequence>
+            <xs:element name="producto" type="tns:productoData" minOccurs="0"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

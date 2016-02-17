@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="DepartmentService"
+    targetNamespace="https://franl2p.wordpress.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12s/"
+    xmlns:tns="https://franl2p.wordpress.com/">
+    <wsdl:types>
+        <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="https://franl2p.wordpress.com/"
+                schemaLocation="Producto.xsd" />
+        </xsd:schema>
+    </wsdl:types>
+    
+    <wsdl:message name="buscarProductoPorId">
+        <wsdl:part name="parameters" element="tns:buscarProductoPorId"/>
+    </wsdl:message>
+    <wsdl:message name="buscarProductoPorIdResponse">
+        <wsdl:part name="parameters" element="tns:buscarProductoPorIdResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscarProductos">
+        <wsdl:part name="parameters" element="tns:buscarProductos"/>
+    </wsdl:message>
+    <wsdl:message name="buscarProductosResponse">
+        <wsdl:part name="parameters" element="tns:buscarProductosResponse"/>
+    </wsdl:message>
+    
+    <wsdl:portType name="ProductosServices">
+        <wsdl:operation name="buscarProductoPorId">
+            <wsdl:input    message="tns:buscarProductoPorId"/>
+            <wsdl:output message="tns:buscarProductoPorIdResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscarProductos">
+            <wsdl:input message="tns:buscarProductos"/>
+            <wsdl:output message="tns:buscarProductosResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    <wsdl:binding name="ProductosServicesPortBinding" type="tns:ProductosServices">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"
+            style="document"></soap12:binding>
+        <wsdl:operation name="buscarProductoPorId">
+            <soap12:operation soapAction="https://franl2p.wordpress.com/ProductosServices/buscarProductoPorId"
+                style="document" />
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscarProductos">
+            <soap12:operation soapAction="https://franl2p.wordpress.com/ProductosServices/buscarProductos"
+                style="document" />
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    
+    <wsdl:service name="ProductosWebServices">
+        <wsdl:port name="ProductosServicesPort" binding="tns:ProductosServicesPortBinding">
+            <soap12:address location="https://franl2p.wordpress.com/wservices/productos" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
