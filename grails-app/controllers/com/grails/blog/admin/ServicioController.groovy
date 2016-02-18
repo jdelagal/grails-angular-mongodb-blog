@@ -15,6 +15,7 @@ class ServicioController {
     /*prueba llamada a ProductosService.groovy
     def productosService
     */
+    def proxyService
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
     static allowedMethods = [delete: "DELETE", save: "POST", update: "PUT"]
@@ -38,6 +39,8 @@ class ServicioController {
         //ahora da un HTTP 407 en la llamada
         String nombre = client.buscarProductos('Pruebas')['nombre']
         */
+        proxyService.callSOA()
+        
         respond servicioList.collect{it as Servicio}.sort {
             it.servicio
         }
