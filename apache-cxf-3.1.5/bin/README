@@ -1,7 +1,0 @@
-INSTRUCCIONES!
-=============
-En D:\SOASUITE\interfaz\oracle_gamb\apache-cxf-3.1.5\bin
-Ejecutar:
-1) wsdl2js -p soap http://94656m.sanidad.msc:8001/soa-infra/services/default/Select/select_client_ep?WSDL
-2) mover a la carpeta javascript
-3) coger cxf-utils de /etc y copiarlo en la carpeta javascript donde implementar un HTML para realizar la llamada SOAP a BPM, desde el Frontend.
