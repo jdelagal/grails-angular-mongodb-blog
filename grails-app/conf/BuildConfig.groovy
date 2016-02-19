@@ -61,8 +61,8 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         //compile ":mongodb:3.0.0"
         compile "org.grails.plugins:cxf:1.1.4"
-        compile "org.grails.plugins:cxf-client:2.1.2"
-        compile "org.grails.plugins:wslite:0.7.2.0"
+        //compile "org.grails.plugins:cxf-client:2.1.2"
+        //compile "org.grails.plugins:wslite:0.7.2.0"
         compile ":asset-pipeline:1.8.7"
         compile ":scaffolding:2.0.3"
         compile ':cache:1.1.2'
@@ -70,7 +70,7 @@ grails.project.dependency.resolution = {
         compile ":spring-security-rest:1.3.4", {
             excludes: 'spring-security-core'
         }
-
+        /*
         if (Environment.current == Environment.PRODUCTION) {
             compile ':webxml:1.4.1'
             compile ':cloud-support:1.0.8'
@@ -78,6 +78,7 @@ grails.project.dependency.resolution = {
                 exclude 'database-session'
             }
         }
+        */
         runtime ":hibernate:3.6.10.9" // or ":hibernate4:4.3.4"
         runtime ":database-migration:1.3.8"
     }

@@ -27,20 +27,8 @@ class ServicioController {
         def servicioList = Servicio.findAll()
 
         /*prueba llamada a ProductosService.groovy
-        a) opcion 1
-        String nombre = productosService.buscarProductos('Pruebas')['nombre']
-        println ": "+nombre
-        
-        b) opcion 2
-        ClientProxyFactoryBean factory = new ClientProxyFactoryBean();
-        factory.setServiceClass(ProductosServices.class);
-        factory.setAddress("http://localhost:9000/catalogo/services/ProductosServices");
-        ProductosServices client = (ProductosServices) factory.create();
-        //ahora da un HTTP 407 en la llamada
-        String nombre = client.buscarProductos('Pruebas')['nombre']
-        */
         proxyService.callSOA()
-        
+        */
         respond servicioList.collect{it as Servicio}.sort {
             it.servicio
         }
