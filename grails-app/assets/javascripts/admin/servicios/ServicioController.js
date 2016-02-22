@@ -36,6 +36,8 @@ servicioController.controller('ServicioDetailController', ['$scope', '$routePara
                 $scope.servicio = servicio
             });
         }
+        $scope.estados = ['Solicitud', 'Analisis', 'Diseño', 'Desarrollo', 
+                            'Acuerdo', 'Integracion', 'Planificado', 'Servicio'];
 
         $scope.saveServicio = function () {
             console.log("Admin añadiendo Servicio", $scope.servicio);

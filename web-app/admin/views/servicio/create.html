@@ -36,7 +36,7 @@
             <div class="form-group">
                 <label for="slug" class="col-lg-2 control-label">Estado</label>
                 <div class="col-lg-6">
-                    <input type="text" name="estado" class="form-control" id="estado" placeholder="Estado del Servicio" ng-model="servicio.estado">
+                    <select class="form-control" placeholder="Estado del Servicio" ng-model="servicio.estado" ng-options="f for f in estados"><option></option></select>
                 </div>
             </div>
             <div class="form-group">
