@@ -14,8 +14,9 @@ class ServicioController {
     def springSecurityService
     /*prueba llamada a ProductosService.groovy
     def productosService
-    */
+    
     def proxyService
+    */
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
     static allowedMethods = [delete: "DELETE", save: "POST", update: "PUT"]

@@ -1,5 +1,6 @@
 import com.grails.blog.auth.Role
 import com.grails.blog.auth.Usuario
+import com.grails.blog.EstadosServicio
 
 class BootStrap {
 
@@ -15,6 +16,9 @@ class BootStrap {
                 email: 'hussain.engr@gmail.com',
                 name: 'Hussain Fakhruddin',
                 authorities: [roleAdmin]).save(failOnError: true)
+
+        EstadosServicio estados =  EstadosServicio.findByEstado("Solicitud") ?:
+            new EstadosServicio(estado: "Solicitud").save(failOnError: true)  
     }
     def destroy = {
     }
