@@ -3,7 +3,6 @@
 *Db.script
 .settings
 stacktrace.log
-/*.zip
 /plugin.xml
 /*.log
 /*DB.*
