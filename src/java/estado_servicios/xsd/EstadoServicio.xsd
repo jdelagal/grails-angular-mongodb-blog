@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<xs:schema  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://www.msssi.es/catalogo/base"
+            xmlns="http://www.msssi.es/catalogo/base"
+            elementFormDefault="qualified"
+            attributeFormDefault="qualified">
+    <xs:element name="ID" type="xs:string"/>
+    <xs:complexType name="MensajeBaseType">
+        <xs:sequence>
+            <xs:element ref="ID"/>
+            <xs:element name="fecha" type="xs:string"/>
+            <xs:element name="usuario" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="EstadoType">
+        <xs:complexContent>
+            <xs:extension base="MensajeBaseType">
+                <xs:sequence>
+                    <xs:element name="estado" type="xs:string"/>
+                    <xs:element name="mensaje" type="xs:string"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>    
+    <xs:element name="InitialRequest" type="EstadoType"/>
+    <xs:element name="IntermediateRequest" type="EstadoType"/>
+    <xs:element name="FinalResponse" type="EstadoType"/>
+</xs:schema>
