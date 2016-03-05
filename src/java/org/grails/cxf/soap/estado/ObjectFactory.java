@@ -1,5 +1,5 @@
 
-package org.grails.cxf.soap;
+package org.grails.cxf.soap.estado;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlElementDecl;

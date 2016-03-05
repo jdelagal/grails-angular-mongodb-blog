@@ -2,13 +2,13 @@ package catalogo
 
 import grails.transaction.Transactional
 
-import org.grails.cxf.soap.EstadoServicioPortType
-import org.grails.cxf.soap.Start
-import org.grails.cxf.soap.EstadoType
-import org.grails.cxf.soap.ObjectFactory
-import org.grails.cxf.soap.MensajeBaseType
-import org.grails.cxf.soap.EstadoServicioPortTypeCallBack
-import org.grails.cxf.soap.EndResponse
+import org.grails.cxf.soap.estado.EstadoServicioPortType
+import org.grails.cxf.soap.estado.Start
+import org.grails.cxf.soap.estado.EstadoType
+import org.grails.cxf.soap.estado.ObjectFactory
+import org.grails.cxf.soap.estado.MensajeBaseType
+import org.grails.cxf.soap.estado.EstadoServicioPortTypeCallBack
+import org.grails.cxf.soap.estado.EndResponse
 
 import org.apache.cxf.frontend.ClientProxyFactoryBean
 import org.apache.cxf.endpoint.Client
@@ -52,7 +52,7 @@ class SolicitudServicioService {
 
 		Start req = new Start()   
 		EstadoType estadoType = new EstadoType()
-		estadoType.setID("2")  
+		estadoType.setID("3")  
 		estadoType.setFecha("fecha")
 		estadoType.setUsuario("admin")
 		estadoType.setEstado("Solicitud")

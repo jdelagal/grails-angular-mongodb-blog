@@ -1,4 +1,4 @@
-package org.grails.cxf.soap;
+package org.grails.cxf.soap.estado;
 
 import javax.jws.Oneway;
 import javax.jws.WebMethod;
