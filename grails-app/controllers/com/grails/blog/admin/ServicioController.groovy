@@ -17,6 +17,8 @@ class ServicioController {
     
     def proxyService
     */
+    def solicitudServicioService
+
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
     static allowedMethods = [delete: "DELETE", save: "POST", update: "PUT"]
@@ -30,6 +32,8 @@ class ServicioController {
         /*prueba llamada a ProductosService.groovy
         proxyService.callSOA()
         */
+        solicitudServicioService.callSolicitudServicio()
+
         respond servicioList.collect{it as Servicio}.sort {
             it.servicio
         }
