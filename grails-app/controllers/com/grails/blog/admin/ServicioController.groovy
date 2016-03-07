@@ -32,8 +32,7 @@ class ServicioController {
         /*prueba llamada a ProductosService.groovy
         proxyService.callSOA()
         */
-        solicitudServicioService.callSolicitudServicio()
-
+        
         respond servicioList.collect{it as Servicio}.sort {
             it.servicio
         }
@@ -69,6 +68,8 @@ class ServicioController {
         servicioInstance.save flush:true
 
         respond servicioInstance, [status: CREATED]
+
+        solicitudServicioService.callSolicitudServicio(servicioInstance.servicio)
     }    
 
 

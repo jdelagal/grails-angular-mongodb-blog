@@ -22,7 +22,7 @@ class SolicitudServicioService {
 
     long connectionTimeOut = 10000L
 
-    def callSolicitudServicio() {
+    def callSolicitudServicio(String id) {
         
     	ClientProxyFactoryBean factory = new JaxWsProxyFactoryBean()
         factory.setServiceClass(EstadoServicioPortType.class)
@@ -37,26 +37,26 @@ class SolicitudServicioService {
         def service = (EstadoServicioPortType) factory.create()
         Client client = ClientProxy.getClient(service)
         HTTPConduit http = (HTTPConduit) client.getConduit()
-        /*
+        
         def username = props.getProperty('username')
         def password = props.getProperty('password')
         def proxyhost = props.getProperty('proxyhost')
         
         http.getProxyAuthorization().setUserName("${username}")
         http.getProxyAuthorization().setPassword("${password}")
-        */
+        
         HTTPClientPolicy httpClientPolicy = http.getClient(); 
 
-        //setUpClientProperties("${proxyhost}", 8080, httpClientPolicy, connectionTimeOut)
+        setUpClientProperties("${proxyhost}", 8080, httpClientPolicy, connectionTimeOut)
         setUpClientProperties(null, null, httpClientPolicy, connectionTimeOut)
 
 		Start req = new Start()   
 		EstadoType estadoType = new EstadoType()
-		estadoType.setID("3")  
-		estadoType.setFecha("fecha")
-		estadoType.setUsuario("admin")
-		estadoType.setEstado("Solicitud")
-		estadoType.setMensaje("mensaje")
+		estadoType.setID(id)  
+		estadoType.setFecha("")
+		estadoType.setUsuario("")
+		estadoType.setEstado("")
+		estadoType.setMensaje("")
 		req.setInitialRequest(estadoType)
 
 		EndResponse res = service.start(req)
