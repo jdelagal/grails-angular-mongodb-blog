@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="DepartmentService"
+    targetNamespace="http://www.msssi.es/catalogo/base/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12s/"
+    xmlns:tns="http://www.msssi.es/catalogo/base/">
+    <wsdl:types>
+        <xsd:schema xmlns="http://www.w3.org/2001/XMLSchema">
+            <import namespace="http://www.msssi.es/catalogo/base/"
+                schemaLocation="DatosServicio.xsd" />
+        </xsd:schema>
+    </wsdl:types>
+    
+    <wsdl:message name="updateServicioByEstado">
+        <wsdl:part name="parameters" element="tns:updateServicioByEstado"/>
+    </wsdl:message>
+    <wsdl:message name="updateServicioByEstadoResponse">
+        <wsdl:part name="parameters" element="tns:updateServicioByEstadoResponse"/>
+    </wsdl:message>
+    
+    <wsdl:portType name="ServicioServices">
+        <wsdl:operation name="updateServicioByEstado">
+            <wsdl:input    message="tns:updateServicioByEstado"/>
+            <wsdl:output message="tns:updateServicioByEstadoResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    
+    <wsdl:binding name="ServicioServicesPortBinding" type="tns:ServicioServices">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"
+            style="document"></soap12:binding>
+        <wsdl:operation name="updateServicioByEstado">
+            <soap12:operation soapAction="http://www.msssi.es/catalogo/base/ServicioServices/updateServicioByEstado"
+                style="document" />
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+
+    </wsdl:binding>
+    
+    <wsdl:service name="ServicioWebServices">
+        <wsdl:port name="ServicioServicesPort" binding="tns:ServicioServicesPortBinding">
+            <soap12:address location="http://www.msssi.es/catalogo/base/catalogo/service" />
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

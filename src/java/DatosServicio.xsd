@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:tns="http://www.msssi.es/catalogo/base/"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0"
+    targetNamespace="http://www.msssi.es/catalogo/base/">
+    
+    <xs:element name="updateServicioByEstado" type="tns:updateServicioByEstado"></xs:element>
+
+    <xs:element name="updateServicioByEstadoResponse" type="tns:updateServicioByEstadoResponse"></xs:element>
+
+
+    <xs:complexType name="updateServicioByEstado">
+        <xs:sequence>
+            <xs:element name="estado" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="updateServicioByEstadoResponse">
+        <xs:sequence>
+            <xs:element name="codigo" type="xs:string"></xs:element>
+            <xs:element name="descripcion" type="xs:string"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
