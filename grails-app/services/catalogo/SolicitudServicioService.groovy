@@ -37,25 +37,25 @@ class SolicitudServicioService {
         def service = (EstadoServicioPortType) factory.create()
         Client client = ClientProxy.getClient(service)
         HTTPConduit http = (HTTPConduit) client.getConduit()
-        
+        /*
         def username = props.getProperty('username')
         def password = props.getProperty('password')
         def proxyhost = props.getProperty('proxyhost')
         
         http.getProxyAuthorization().setUserName("${username}")
         http.getProxyAuthorization().setPassword("${password}")
-        
+        */
         HTTPClientPolicy httpClientPolicy = http.getClient(); 
 
-        setUpClientProperties("${proxyhost}", 8080, httpClientPolicy, connectionTimeOut)
+        //setUpClientProperties("${proxyhost}", 8080, httpClientPolicy, connectionTimeOut)
         setUpClientProperties(null, null, httpClientPolicy, connectionTimeOut)
 
 		Start req = new Start()   
 		EstadoType estadoType = new EstadoType()
 		estadoType.setID(id)  
 		estadoType.setFecha("")
-		estadoType.setUsuario("")
-		estadoType.setEstado("")
+		estadoType.setUsuario("admin")
+		estadoType.setEstado("Solicitud")
 		estadoType.setMensaje("")
 		req.setInitialRequest(estadoType)
 
@@ -73,8 +73,10 @@ class SolicitudServicioService {
         httpClientPolicy.setConnectionTimeout(timeout); 
         httpClientPolicy.setAcceptEncoding("UTF-8"); 
         if (proxyHost != null && proxyPort != null){ 
+            /*
             httpClientPolicy.setProxyServer(proxyHost); 
             httpClientPolicy.setProxyServerPort(proxyPort); 
+            */
         } 
     } 
 }
