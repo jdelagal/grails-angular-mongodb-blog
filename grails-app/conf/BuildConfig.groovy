@@ -60,7 +60,10 @@ grails.project.dependency.resolution = {
 
         // plugins for the compile step
         //compile ":mongodb:3.0.0"
-        compile "org.grails.plugins:cxf:1.1.4"
+
+        //para plataforma nexus y JAXB
+        //compile "org.grails.plugins:cxf:1.1.4"
+
         //compile "org.grails.plugins:cxf-client:2.1.2"
         //compile "org.grails.plugins:wslite:0.7.2.0"
         compile ":asset-pipeline:1.8.7"
