@@ -1,0 +1,19 @@
+introduction: Introduction to the Spring Security REST plugin
+authentication:
+  title: Authentication Endpoint
+  logout: Logout Endpoint
+tokenGeneration: Token Generation
+tokenStorage:
+  title: Token Storage
+  memcached: Memcached
+  gorm: GORM
+  grailsCache: Grails Cache
+tokenValidation: Token Validation Filter
+cors: CORS support
+oauth:
+  title: Delegating authentication to OAuth providers
+  google: Google
+  facebook: Facebook
+  twitter: Twitter
+debugging: Debugging
+faq: Frequently Asked Questions

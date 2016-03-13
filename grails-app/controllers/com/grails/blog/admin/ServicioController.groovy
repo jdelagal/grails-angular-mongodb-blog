@@ -2,10 +2,10 @@ package com.grails.blog.admin
 
 import com.grails.blog.Servicio
 import grails.transaction.Transactional
-
+/*
 import org.grails.cxf.soap.ProductosServices
 import org.apache.cxf.frontend.ClientProxyFactoryBean;
-
+*/
 import static org.springframework.http.HttpStatus.*
 
 @Transactional(readOnly = true)
@@ -16,9 +16,9 @@ class ServicioController {
     def productosService
     
     def proxyService
-    */
+   
     def solicitudServicioService
-
+    */
     static namespace = 'adminV1'
     static responseFormats = ['json', 'xml']
     static allowedMethods = [delete: "DELETE", save: "POST", update: "PUT"]
@@ -68,8 +68,9 @@ class ServicioController {
         servicioInstance.save flush:true
 
         respond servicioInstance, [status: CREATED]
-
+        /*
         solicitudServicioService.callSolicitudServicio(servicioInstance.servicio)
+        */
     }    
 
 

@@ -181,7 +181,13 @@
             <scope>provided</scope>
             <type>zip</type>
         </dependency>
-        
+
+        <!-- ORACLE database driver -->
+        <dependency>
+            <groupId>com.oracle</groupId>
+            <artifactId>ojdbc6</artifactId>
+            <version>11.2.0</version>
+        </dependency>        
 
     </dependencies>
 
@@ -233,6 +239,9 @@
                 <configuration>
                     <!-- Whether for Fork a JVM to run Grails commands -->
                     <fork>true</fork>
+                    <forkedVmArgs>
+                          <forkedVmArg>-Dserver.port=9000</forkedVmArg>
+                    </forkedVmArgs>                     
                 </configuration>
                 <extensions>true</extensions>
             </plugin>
